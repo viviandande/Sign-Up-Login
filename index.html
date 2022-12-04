@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Joshua Philip C. Unilongo">
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="index.css">
+  <title> Login </title>
+</head>
+
+<body>
+  <div class="dialog">
+    <button type="button" class="cdialog"> Close </button>
+    <div class="dwrap">
+      <h1>Your account is succesfully created!</h1>
+      <p> after closing this you'll be directed to login page </p>
+    </div>
+  </div>
+  <div class="wrapper1">
+    <form class="sign">
+      <h2> Sign Up </h2>
+      <button type="button" class="ao"> Already have account? </button>
+      <input type="text" name="firstname" placeholder="Firstname...">
+      <input type="text" name="lastname" placeholder="Lastname...">
+      <input type="number" name="number" placeholder="Contact Number...">
+      <input type="email" name="email" placeholder="Email...">
+      <input type="password" name="password" placeholder="Password...">
+      <input type="password" name="confirmpassword" placeholder="Confirm Password...">
+      <div class="sp-wrapper">
+        <input type="checkbox" name="show" class="check-style"> Show Password
+      </div>
+      <button type="button" class="sbtn"> Sign In </button>
+    </form>
+  </div>
+  <div class="wrapper2 d">
+    <form class="login">
+      <h2> Login </h2>
+      <button type="button" class="no"> Dont have account yet ? </button>
+      <input type="email" name="email" placeholder="Email...">
+      <input type="password" name="password" placeholder="Password...">
+      <div class="sp-wrapper">
+        <input type="checkbox" name="show" class="check-style"> Show Password
+      </div>
+      <button type="button" class="lbtn"> Login </button>
+    </form>
+  </div>
+  <div class="wrapper3">
+    <div class="userpanel">
+      <div class="header">
+        <h1> Welcome <span class="user"></span></h1>
+        <button type="button" class="logout"> Logout </button>
+      </div>
+      <ul class="panel-label">
+        <li class="dfirstname">Firstname : <span></span></li>
+        <li class="dmiddlename">Middlename : <span></span></li>
+        <li class="dlastname">Lastname : <span></span></li>
+        <li class="dnumber">Contact Number : <span></span></li>
+        <li class="demail">Email : <span></span></li>
+        <li class="dress">Address : <span></span></li>
+        <li class="dpassword">Password : <span></span></li>
+      </ul>
+      <div class="btn-wrapper">
+        <button type="button" class="edit-account"> Edit Information </button>
+        <button type="button" class="delete-account"> Delete Account </button>
+      </div>
+      <div class="delete-promt">
+        <h3> Confirm delete ?</h3>
+        <p> Please be advised that this is cannot be undone. </p>
+        <div class="btn-wrapper">
+          <button type="button" class="confirm-delete"> Confirm </button>
+          <button type="button" class="cancel-delete"> Cancel </button>
+        </div>
+      </div>
+      <div class="edit-modal">
+        <h2> Edit your account </h2>
+        <ul>
+          <li>Firstname : <input type="text" name="nfirstname"></li>
+          <li>Middlename : <input type="text" name="nmiddlename"></li>
+          <li>Lastname : <input type="text" name="nlastname"></li>
+          <li>Contact Number : <input type="number" name="nnumber"></li>
+          <li>Email : <input type="email" name="nemail"></li>
+          <li>Address : <input type="text" name="address"></li>
+          <li>Password : <input type="password" name="npassword"></li>
+          <li>Confirm Password : <input type="password" name="ncpassword"></li>
+          <div class="sp-wrapper">
+            <input class="show3" type="checkbox" name="show" class="check-style"> Show Password
+          </div>
+        </ul>
+        <div class="btn-wrapper">
+          <button type="button" class="save"> Save Changes </button>
+          <button type="button" class="cancel"> Cancel </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body></html>
