@@ -11,6 +11,7 @@
 ::-webkit-scrollbar {
   width: 3px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom right, #0c0cf0, #162990);
   border-radius: 10%;
@@ -138,6 +139,7 @@ body {
   font-size: 1.3rem;
   text-align: center;
 }
+
 .dialog p {
   margin: 10px 0px;
   text-align: center;
@@ -156,11 +158,12 @@ form {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
+
 input[type=number] {
-    -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
 
 button {
@@ -185,11 +188,6 @@ ul {
   height: auto;
 }
 
-ul li {
-  margin: 20px 0px;
-  font-weight: 600;
-}
-
 span {
   font-weight: 500;
 }
@@ -200,18 +198,36 @@ form input {
   border-radius: 0px 10px 10px 0px;
   padding: 10px 0px 10px 10px;
   width: 80%;
-  transition: .2s ease-in-out;
 }
 
-.sp-wrapper {
-  margin: 5px 0px;
+.password-wrapper {
+  width: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.sp-wrapper .check-style {
+.password-wrapper .password {
+  width: 100%;
+}
+
+.password-eye {
   margin: 0;
+  display: block;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  position: absolute;
+  background: url(eye3.PNG) no-repeat center;
+  background-size: cover;
   box-shadow: none;
-  padding: 0;
-  width: auto;
+}
+
+.eye-opened {
+  background: url(eye.PNG) no-repeat center;
+  background-size: cover;
 }
 
 .userpanel {
@@ -221,6 +237,12 @@ form input {
   border-radius: 10px;
   position: relative;
   overflow: auto;
+}
+
+.userpanel ul li {
+  margin: 20px 0px;
+  font-weight: 600;
+  width: inherit;
 }
 
 .header {
@@ -237,11 +259,12 @@ form input {
   text-transform: capitalize;
 }
 
-.userpanel ul li span{
+.userpanel ul li span {
   text-transform: capitalize;
 }
+
 .userpanel ul li:nth-child(5) span,
-.userpanel ul li:nth-child(7) span{
+.userpanel ul li:nth-child(7) span {
   text-transform: none;
 }
 
@@ -311,12 +334,14 @@ form input {
   border-radius: 0px 10px 10px 0px;
   width: 50%;
 }
-.edit-modal .show3 {
-  width: auto;
+
+.edit-modal ul li:nth-child(7) {
+  display: flex;
+  align-items: center;
 }
 
-.edit-modal .sp-wrapper {
-  text-align: center;
+.edit-modal ul li .password-wrapper{
+  width: 50%;
 }
 
 form,
@@ -338,11 +363,13 @@ form,
   border-radius: 0px;
   box-shadow: none;
   text-decoration: underline;
+  font-weight: 400;
 }
 
 .wrapper1,
 .wrapper2,
-.wrapper3 {
+.wrapper3,
+.wrapper4 {
   width: 100%;
   height: 100vh;
   flex-wrap: wrap;
@@ -352,6 +379,182 @@ form,
   display: none;
 }
 
+.wrapper2 .topheader{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px 0px;
+}
+
+.person-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 28px;
+  box-shadow: -2px 2px 5px #9b9b9b;
+  background: #ffffff;
+  padding: 10px;
+}
+.wrapper2 .topheader .person-wrapper .num{
+  position: absolute;
+  font-weight: 600;
+  top: -5px;
+  background: rgba(255, 0, 0, 0.99);
+  display: block;
+  padding: 2px 6px;
+  border-radius: 10px;
+  right: 0;
+}
+.wrapper2 .topheader .person-icon {
+  background: url(person-blue.png) no-repeat center;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+.wrapper2 {
+  flex-direction: column;
+}
+
+.color-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: auto;
+  transition: .5s ease-in-out;
+  padding: 2px 15px;
+  border-radius: 50px;
+  margin-left: 20px;
+  box-shadow: -1px 1px 5px #838383;
+}
+
+.color-wrapper > button {
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateX(-12px);
+}
+
+.color-wrapper .color {
+  transform: translateX(12px);
+  background: radial-gradient(#00ff00,#3ab21c);
+  box-shadow: 
+  0px 0px 10px #000000,
+  0px 0px 15px #268410;
+}
+
+.account-modal {
+  position: absolute;
+  background: rgba(82, 12, 240, 0.86);
+  box-shadow: -1px 2px 5px #918a8a;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: auto;
+  border-radius: 5px;
+  display: none;
+}
+.account-modal .account-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid white;
+  font-size: 14px;
+}
+.account-modal .account-header h2 {
+  display: block;
+}
+.account-modal .account-header .ca {
+  display: block;
+  padding: 0px;
+  background: transparent;
+  box-shadow: none;
+  font-size: 2em;
+}
+.account-modal .account-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.account-body {
+  box-shadow: 0px 0px 5px #2c1c1c;
+  border-radius: 5px;
+  padding: 10px;
+  background: rgba(227, 10, 10, 0.83);
+  color: inherit;
+}
+.account-modal .account-container .account-body h3 {
+  font-size: 1.1rem;
+}
+
+.forgot {
+  border-radius: 0px;
+  background: transparent;
+  box-shadow: none;
+  color: #000000;
+  padding: 0px;
+  margin: 5px 0px 20px;
+  width: 80%;
+  text-align: left;
+  padding-left: 5px;
+  font-weight: 400;
+}
+
+.step1,
+.step2,
+.step3 {
+  display: none;
+}
+.step1 ul li,
+.step2 ul li,
+.step3 ul li {
+  text-align: center;
+  font-weight: 400;
+  padding: 0px 10px;
+  line-height: 1.3;
+}
+
+.vloading {
+  background: rgba(240, 175, 175, 0.91);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  border-radius: 10px;
+  display: none;
+}
+.vc {
+  background: red;
+  margin-bottom: 20px;
+  display: none;
+}
+.vloading h4 {
+  margin-bottom: 10px;
+}
+.vloading h4,
+.vloading h5 {
+  font-size: 1.5rem;
+}
+.vloading p {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  display: none;
+}
+.vloading .a0 {
+  font-weight: 400;
+  margin: 5px;
+}
 
 .a {
   animation: slide1 .5s ease-in-out 1;
@@ -391,10 +594,12 @@ form,
   border: 1px solid #70fd70;
   box-shadow: -1px 1px 5px #7fff7f;
 }
+
 .r {
   border: 1px solid #fd7070;
   box-shadow: -1px 1px 5px #ff7f7f;
 }
+
 .o {
   border: 1px solid #ff903f;
   box-shadow: -1px 1px 5px #ffbb89;
@@ -404,206 +609,335 @@ form,
   animation: clicked .15s ease-in-out 1;
 }
 
+.padding {
+  padding: 0px 20px;
+}
 
+.margin {
+  margin-right: 15px;
+}
+
+/** Dark Theme Section **/
+
+.colorsTrans {
+  transition: .2s ease-in-out;
+}
+
+.bodyB {
+  background: rgb(0, 0, 0);
+  color: #00cb00;
+}
+
+.bgB {
+  background: black;
+}
+
+.textC {
+  color: #26c400;
+}
+
+.edit-modal .glow {
+  box-shadow: 0px 0px 5px lime;
+}
+
+.glow {
+  box-shadow: 
+  0px 0px 3px #60ff44,
+  0px 0px 7px #09f400;
+}
+
+.btn-glow {
+  background: #000000;
+}
+
+.bgo {
+  background: rgba(0, 0, 0, 0.87);
+}
+
+.eyeB {
+  background-color: lime;
+}
 
 /**** Media Queries ****/
 
 @media screen and (max-width: 1280px) {}
+
 @media screen and (max-width: 1180px) {}
+
 @media screen and (max-width: 1138px) {}
+
 @media screen and (max-width: 1024px) {
   .wrapper1 form {
     width: 45%;
   }
 }
+
 @media screen and (max-width: 960px) {}
+
 @media screen and (max-width: 926px) {
-  .wrapper1, 
+
+  .wrapper1,
   .wrapper3 {
     overflow: auto;
   }
+
   .wrapper1 form,
   .wrapper3 .userpanel {
     margin: 60px 0px;
   }
 }
+
 @media screen and (max-width: 915px) {}
+
 @media screen and (max-width: 914px) {}
+
 @media screen and (max-width: 912px) {
   .wrapper1 form {
     width: 47%;
   }
 }
+
 @media screen and (max-width: 896px) {}
+
 @media screen and (max-width: 854px) {}
+
 @media screen and (max-width: 851px) {}
+
 @media screen and (max-width: 846px) {}
+
 @media screen and (max-width: 844px) {}
+
 @media screen and (max-width: 823px) {}
+
 @media screen and (max-width: 820px) {
   .dialog {
     width: 70%;
   }
+
   .wrapper1 form {
     width: 57%;
   }
+
   .wrapper2 form {
     width: 45%;
   }
 }
+
 @media screen and (max-width: 812px) {}
+
 @media screen and (max-width: 800px) {
   .wrapper1 form {
     width: 57%;
   }
+
   .wrapper2 form {
     width: 45%;
   }
 }
+
 @media screen and (max-width: 786px) {}
+
 @media screen and (max-width: 745px) {}
+
 @media screen and (max-width: 740px) {}
+
 @media screen and (max-width: 736px) {}
+
 @media screen and (max-width: 732px) {}
+
 @media screen and (max-width: 731px) {}
+
 @media screen and (max-width: 720px) {}
+
 @media screen and (max-width: 712px) {
   .wrapper2 form {
     width: 46%;
   }
 }
+
 @media screen and (max-width: 667px) {}
+
 @media screen and (max-width: 658px) {}
+
 @media screen and (max-width: 653px) {}
+
 @media screen and (max-width: 640px) {}
+
 @media screen and (max-width: 600px) {
   .wrapper1 form {
     width: 70%;
   }
+
   .wrapper2 form {
     width: 55%;
   }
+
   .wrapper3 .userpanel {
     width: 90%;
   }
 }
+
 @media screen and (max-width: 568px) {}
+
 @media screen and (max-width: 533px) {}
+
 @media screen and (max-width: 480px) {
   .dialog {
     width: 90%;
   }
+
   .wrapper1 form {
     width: 80%;
   }
+
   .wrapper2 form {
     width: 70%;
   }
 }
+
 @media screen and (max-width: 428px) {
   .dialog {
     width: 95%;
   }
+
   .wrapper1 form {
     width: 95%;
   }
+
   .wrapper2 form {
     width: 75%;
   }
+
   .wrapper3 .userpanel .header {
     display: block;
     text-align: center;
   }
+
   .wrapper3 .userpanel .header .logout {
     margin: 10px auto;
   }
 }
+
 @media screen and (max-width: 414px) {
   .edit-modal {
     padding: 10px 0px;
   }
+
   .edit-modal h2 {
     text-align: center;
   }
-  .edit-modal ul li{
+
+  .edit-modal ul li {
     padding: 0px 10px;
   }
+
   .edit-modal ul li input {
     width: 100%;
   }
+  .edit-modal ul li:nth-child(7) {
+    display: block;
+    width: inherit;
+  }
+  .edit-modal ul li:nth-child(7) .password-wrapper {
+    width: 100%;
+  }
 }
+
 @media screen and (max-width: 412px) {
   .edit-modal {
     padding: 10px 0px;
   }
+
   .edit-modal h2 {
     text-align: center;
   }
-  .edit-modal ul li{
+
+  .edit-modal ul li {
     padding: 0px 10px;
   }
+
   .edit-modal ul li input {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 393px) {
-  .wrapper1 form input {
-    width: 90%;
+  .password-wrapper {
+    width: inherit;
   }
+  form input {
+    width: inherit;
+  }
+  
   .wrapper3 .userpanel .btn-wrapper > button {
     margin: 5px;
   }
 }
+
 @media screen and (max-width: 384px) {
   .wrapper2 form {
     width: 85%;
   }
+
   .wrapper2 form input {
     width: 87%;
   }
 }
+
 @media screen and (max-width: 375px) {
   .wrapper2 form {
     width: 90%;
   }
+
   .wrapper2 form input {
     width: 90%;
   }
 }
+
 @media screen and (max-width: 353px) {
   .wrapper3 .userpanel .header {
     margin-bottom: 35px;
   }
-  .wrapper3 .btn-wrapper{
+
+  .wrapper3 .btn-wrapper {
     margin-top: 20px;
   }
+
   .wrapper3 .userpanel .btn-wrapper > button {
     margin: 7px 0px;
   }
+
   .edit-modal h2 {
     margin-bottom: 30px;
   }
+
   .edit-modal .btn-wrapper {
     display: flex;
     flex-direction: column;
   }
 }
+
 @media screen and (max-width: 320px) {
   .wrapper2 {
     overflow: auto;
   }
+
   .wrapper1 form input {
     width: 100%;
   }
+
   .wrapper3 .userpanel {
     width: 95%;
     padding: 30px 5px 0px;
   }
+
   .wrapper3 .userpanel .btn-wrapper {
     flex-direction: column;
   }
 }
+
 @media screen and (max-width: 280px) {
+
   .wrapper1 form,
   .wrapper2 form,
   .wrapper3 .userpanel {
@@ -612,9 +946,11 @@ form,
     border-radius: 0px;
     padding: 0px;
   }
-  .wrapper3 .userpanel li{
+
+  .wrapper3 .userpanel li {
     padding: 0px 0px 0px 10px;
   }
+
   .wrapper1 form input,
   .wrapper2 form input {
     border-radius: 0px;
@@ -622,40 +958,49 @@ form,
     margin: 5px 0px;
     width: 100%;
   }
+
   .wrapper1 form .check-style,
   .wrapper2 form .check-style {
     margin: 20px 0px 5px;
   }
+
   .wrapper1 form .sbtn,
   .wrapper2 form .lbtn {
     width: 90%;
     padding: 10px;
   }
+
   .edit-modal {
     padding: 0px;
     margin: 0px;
   }
+
   .wrapper3 .edit-modal ul li {
     padding: 0px;
     display: block;
     text-align: center;
   }
+
   .wrapper3 .edit-modal ul li input {
     text-align: center;
     font-size: 16px;
     padding: 10px;
   }
 }
+
 @media screen and (max-width: 240px) {
+
   .wrapper1 h2,
   .wrapper2 h2,
   .edit-modal h2 {
     margin: 0;
   }
+
   .wrapper1 form input,
   .wrapper2 form input {
     padding: 12px;
   }
+
   .wrapper3 .userpanel .header {
     font-size: .8rem;
     display: flex;
@@ -664,18 +1009,23 @@ form,
     flex-direction: column-reverse;
     margin: 0px 0px 30px;
   }
+
   .wrapper3 .userpanel .header .logout {
     margin: 0px 0px 25px;
   }
+
   .wrapper3 .userpanel ul li {
     padding: 0px 0px 0px 5px;
   }
+
   .wrapper3 .edit-modal ul li {
     padding: 0px;
   }
+
   .edit-modal h2 {
     font-size: 1.4rem;
   }
+
   .edit-modal ul li input {
     border-radius: 0px;
   }

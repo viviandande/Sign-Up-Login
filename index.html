@@ -21,28 +21,46 @@
   <div class="wrapper1">
     <form class="sign">
       <h2> Sign Up </h2>
-      <button type="button" class="ao"> Already have account? </button>
+      <button type="button" class="ao"> Already have an account? </button>
       <input type="text" name="firstname" placeholder="Firstname...">
       <input type="text" name="lastname" placeholder="Lastname...">
       <input type="number" name="number" placeholder="Contact Number...">
       <input type="email" name="email" placeholder="Email...">
-      <input type="password" name="password" placeholder="Password...">
-      <input type="password" name="confirmpassword" placeholder="Confirm Password...">
-      <div class="sp-wrapper">
-        <input type="checkbox" name="show" class="check-style"> Show Password
+      <div class="password-wrapper">
+        <input class="password" type="password" name="password" placeholder="Password...">
+        <button class="password-eye" type="button"></button>
       </div>
+      <input type="password" name="confirmpassword" placeholder="Confirm Password...">
       <button type="button" class="sbtn"> Sign In </button>
     </form>
   </div>
   <div class="wrapper2 d">
+    <div class="topheader">
+      <button type="button" class="person-wrapper">
+        <div class="num"></div>
+        <div class="person-icon"></div>
+      </button>
+      <div class="color-wrapper">
+        <button type="button" class="colors m"></button>
+      </div>
+    </div>
+    <div class="account-modal">
+      <div class="account-header">
+        <h2> Accounts </h2>
+        <button type="button" class="ca">&times;</button>
+      </div>
+      <div class="account-container">
+      </div>
+    </div>
     <form class="login">
       <h2> Login </h2>
-      <button type="button" class="no"> Dont have account yet ? </button>
+      <button type="button" class="no"> Dont have an account yet? </button>
       <input type="email" name="email" placeholder="Email...">
-      <input type="password" name="password" placeholder="Password...">
-      <div class="sp-wrapper">
-        <input type="checkbox" name="show" class="check-style"> Show Password
+      <div class="password-wrapper">
+        <input class="password" type="password" name="password" placeholder="Password...">
+        <button class="password-eye" type="button"></button>
       </div>
+      <button type="button" class="forgot"> Forgot Password </button>
       <button type="button" class="lbtn"> Login </button>
     </form>
   </div>
@@ -76,17 +94,18 @@
       <div class="edit-modal">
         <h2> Edit your account </h2>
         <ul>
-          <li>Firstname : <input type="text" name="nfirstname"></li>
-          <li>Middlename : <input type="text" name="nmiddlename"></li>
-          <li>Lastname : <input type="text" name="nlastname"></li>
-          <li>Contact Number : <input type="number" name="nnumber"></li>
-          <li>Email : <input type="email" name="nemail"></li>
-          <li>Address : <input type="text" name="address"></li>
-          <li>Password : <input type="password" name="npassword"></li>
-          <li>Confirm Password : <input type="password" name="ncpassword"></li>
-          <div class="sp-wrapper">
-            <input class="show3" type="checkbox" name="show" class="check-style"> Show Password
-          </div>
+          <li>Firstname : <input type="text" name="nfirstname" placeholder="Firstname"></li>
+          <li>Middlename : <input type="text" name="nmiddlename" placeholder="Middle"></li>
+          <li>Lastname : <input type="text" name="nlastname" placeholder="Lastname"></li>
+          <li>Contact Number : <input type="number" name="nnumber" placeholder="Contact Number"></li>
+          <li>Email : <input type="email" name="nemail" placeholder="Email"></li>
+          <li>Address : <input type="text" name="address" placeholder="Address"></li>
+          <li>Password : <div class="password-wrapper">
+        <input class="password" type="password" name="password" placeholder="Password...">
+        <button class="password-eye" type="button"></button>
+      </div>
+          </li>
+          <li>Confirm Password : <input type="password" name="ncpassword" placeholder="Confirm Password"></li>
         </ul>
         <div class="btn-wrapper">
           <button type="button" class="save"> Save Changes </button>
@@ -95,5 +114,52 @@
       </div>
     </div>
   </div>
+  <div class="wrapper4">
+    <form class="step1 d">
+      <ul>
+        <li> Enter the email or mobile number that you've forgotten the password </li>
+      </ul>
+      <input type="text" name="value" placeholder="Email or mobile number">
+      <input hidden>
+      <div class="btn-wrapper">
+        <button type="button" class="proceed"> Procced </button>
+        <button type="button" class="back"> Back </button>
+      </div>
+    </form>
+    <form class="step2">
+      <ul>
+        <li></li>
+      </ul>
+      <input type="name" name="fname" placeholder="Firstname">
+      <input type="name" name="lname" placeholder="Lastname">
+      <div class="btn-wrapper">
+        <button type="button" class="proceed2"> Procced </button>
+        <button type="button" class="back2"> Back </button>
+      </div>
+    </form>
+    <form class="step3">
+      <ul>
+        <li> Create new password </li>
+      </ul>
+      <div class="password-wrapper">
+        <input class="password" type="password" name="fpassword" placeholder="Password...">
+        <button class="password-eye" type="button"></button>
+      </div>
+      <input type="password" name="cfpassword" placeholder="Confirm Password">
+      <div class="btn-wrapper">
+        <button type="button" class="submit"> Submit </button>
+        <button type="button" class="fcancel"> Cancel </button>
+      </div>
+    </form>
+    <div class="vloading">
+      <button type="button" class="vc"> Close </button>
+      <h4> Validating... </h4>
+      <h5> 5 </h5>
+      <p> The additional information you've provided is not exist in the database. </p>
+      <p class="a0"> by closing this window you'll be redirected back to the login page. </p>
+    </div>
+  </div>
 
-</body></html>
+</body>
+
+</html>
