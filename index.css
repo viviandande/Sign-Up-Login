@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom right, #0c0cf0, #162990);
+  background: black;
   border-radius: 10%;
 }
 
@@ -103,6 +103,47 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom right, rgb(255, 255, 255),rgb(240, 240, 240), white);
+}
+
+form {
+  width: 30%;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+form,
+.person-wrapper,
+.color-wrapper,
+.userpanel {
+  box-shadow: 
+  0px 0px 2px rgb(231, 231, 231),
+  -1px 1px 5px rgb(230, 230, 230),
+  -1px 1px 10px rgb(223, 223, 223),
+  -1px 1px 20px rgb(223, 223, 223);
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.822),rgba(248, 248, 248, 0.5), rgba(255, 255, 255, 0.815));
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+  box-shadow: 
+  0px 0px 3px rgb(211, 211, 211),
+  0px 0px 5px rgb(216, 216, 216);
+  background: rgb(245, 245, 245);
 }
 
 .dialog {
@@ -110,7 +151,6 @@ body {
   height: auto;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: -1px 2px 5px black;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -118,8 +158,7 @@ body {
   align-items: center;
   position: fixed;
   z-index: 1;
-  background: rgba(255, 0, 0, 0.84);
-  color: white;
+  color:inherit;
   display: none;
 }
 
@@ -128,7 +167,6 @@ body {
   border-radius: 0px;
   width: 100%;
   background: transparent;
-  box-shadow: none;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: underline;
@@ -145,37 +183,19 @@ body {
   text-align: center;
 }
 
-form {
-  width: 30%;
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 button {
-  background: linear-gradient(to bottom right, #0c0cf0, #162990);
+  background: linear-gradient(to bottom right, #505050, #000000ef, #474747);
   margin: 10px 0px;
   padding: 10px 20px;
   border-radius: 10px;
   font-weight: 600;
   color: white;
-  box-shadow: -1px 2px 5px #8d8d8d;
   display: block;
   cursor: pointer;
+}
+
+.sbtn, .lbtn {
+  box-shadow: -1px 1px 5px rgb(136, 136, 136);
 }
 
 h2 {
@@ -194,7 +214,6 @@ span {
 
 form input {
   margin: 10px 0px;
-  box-shadow: -1px 1px 5px #888888;
   border-radius: 0px 10px 10px 0px;
   padding: 10px 0px 10px 10px;
   width: 80%;
@@ -222,7 +241,7 @@ form input {
   position: absolute;
   background: url(eye3.png) no-repeat center;
   background-size: cover;
-  box-shadow: none;
+  
 }
 
 .eye-opened {
@@ -329,7 +348,6 @@ form input {
 }
 
 .edit-modal input {
-  box-shadow: -1px 1px 5px #cccccc;
   padding: 10px 0px 10px 10px;
   border-radius: 0px 10px 10px 0px;
   width: 50%;
@@ -344,12 +362,6 @@ form input {
   width: 50%;
 }
 
-form,
-.userpanel,
-.delete-promt .edit-modal {
-  box-shadow: -1px 2px 5px #414141;
-}
-
 .delete-account,
 .confirm-delete,
 .save {
@@ -361,7 +373,6 @@ form,
   background: transparent;
   color: black;
   border-radius: 0px;
-  box-shadow: none;
   text-decoration: underline;
   font-weight: 400;
 }
@@ -394,7 +405,6 @@ form,
   justify-content: center;
   align-items: center;
   border-radius: 28px;
-  box-shadow: -2px 2px 5px #9b9b9b;
   background: #ffffff;
   padding: 10px;
 }
@@ -417,6 +427,7 @@ form,
 }
 .wrapper2 {
   flex-direction: column;
+  filter: blur(9);
 }
 
 .color-wrapper {
@@ -430,7 +441,6 @@ form,
   padding: 2px 15px;
   border-radius: 50px;
   margin-left: 20px;
-  box-shadow: -1px 1px 5px #838383;
 }
 
 .color-wrapper > button {
@@ -445,15 +455,10 @@ form,
 .color-wrapper .color {
   transform: translateX(12px);
   background: radial-gradient(#00ff00,#3ab21c);
-  box-shadow: 
-  0px 0px 10px #000000,
-  0px 0px 15px #268410;
 }
 
 .account-modal {
   position: absolute;
-  background: rgba(82, 12, 240, 0.86);
-  box-shadow: -1px 2px 5px #918a8a;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -462,6 +467,14 @@ form,
   border-radius: 5px;
   display: none;
 }
+
+.account-modal, .account-body, .dialog, .vloading {
+  background: linear-gradient(to bottom right, rgba(51, 51, 51, 0.808),rgba(17, 17, 17, 0.897), rgba(24, 24, 24, 0.849));
+  box-shadow: 
+  0px 0px 4px rgb(128, 128, 128);
+  color: white;
+}
+
 .account-modal .account-header {
   display: flex;
   justify-content: space-around;
@@ -471,13 +484,14 @@ form,
 }
 .account-modal .account-header h2 {
   display: block;
+  color: inherit;
 }
 .account-modal .account-header .ca {
   display: block;
   padding: 0px;
   background: transparent;
-  box-shadow: none;
   font-size: 2em;
+  color: inherit;
 }
 .account-modal .account-container {
   padding: 10px;
@@ -486,11 +500,10 @@ form,
   flex-direction: column;
 }
 .account-body {
-  box-shadow: 0px 0px 5px #2c1c1c;
   border-radius: 5px;
   padding: 10px;
-  background: rgba(227, 10, 10, 0.83);
   color: inherit;
+  background: rgba(0, 0, 0, 0.274);
 }
 .account-modal .account-container .account-body h3 {
   font-size: 1.1rem;
@@ -499,7 +512,6 @@ form,
 .forgot {
   border-radius: 0px;
   background: transparent;
-  box-shadow: none;
   color: #000000;
   padding: 0px;
   margin: 5px 0px 20px;
@@ -519,12 +531,11 @@ form,
 .step3 ul li {
   text-align: center;
   font-weight: 400;
-  padding: 0px 10px;
+  padding: 15px 10px 5px;
   line-height: 1.3;
 }
 
 .vloading {
-  background: rgba(240, 175, 175, 0.91);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -534,7 +545,6 @@ form,
   display: none;
 }
 .vc {
-  background: red;
   margin-bottom: 20px;
   display: none;
 }
@@ -544,16 +554,19 @@ form,
 .vloading h4,
 .vloading h5 {
   font-size: 1.5rem;
+  color: inherit;
 }
 .vloading p {
   text-align: center;
   margin-top: 20px;
   font-weight: 600;
   display: none;
+  color: inherit;
 }
 .vloading .a0 {
   font-weight: 400;
   margin: 5px;
+  color: inherit;
 }
 
 .a {
