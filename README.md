@@ -1,9 +1,5 @@
-# Sign-Up / Login with Userpanel
+# Simple Sign-Up, Login w/ Userpanel.
 
-I haven't learned any server-side yet. I only made this using localStorage and this is not the best practice of making forms.
+ - I haven't learned any server-side yet. I used localstorage for this as a localdatabase.
 
-#: Sign up or login should be done using php / mysql and so on.
-
-anyways, Here's the link try it! : <a href="https://jinshin19.github.io/Sign-Up-Login/"> Simple Sign Up / Login </a>
-
-- December, 10, 2022 : <p style="color: lime">Under Construction</p>
+ - If you're wondering what it looks like, here's the link :  <a href="https://jinshin19.github.io/Sign-Up-Login/"> Try it. </a>
