@@ -823,6 +823,7 @@ const count = e => {
 const timer = e => {
   if (document.querySelector('.vloading').firstElementChild.nextElementSibling.nextElementSibling.innerText === "0") {
     document.querySelector('.vc').style.display = "block";
+    document.querySelector('.vloading').classList.add('vloading-w');
     document.querySelector('.vloading').firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "block"
     document.querySelector('.vloading').firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "block"
   } else {};
@@ -1301,6 +1302,7 @@ document.querySelector('.vc').onclick = e => {
       document.querySelector('.vloading').classList.remove('c');
 
       document.querySelector('h5').innerText = "5";
+      document.querySelector('.vloading').classList.remove('vloading-w');
       document.querySelector('.vloading').firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "none";
       document.querySelector('.vloading').firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "none";
 
@@ -1868,7 +1870,7 @@ document.querySelector('.save').onclick = e => {
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.length === 0 &&
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.length === 0 &&
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.length === 0 &&
-      document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.length === 0 &&
+      document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value.length === 0 &&
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.length === 0
     ) {
       alert('Fields must be not empty');
@@ -1905,7 +1907,7 @@ document.querySelector('.save').onclick = e => {
       alert('Address is required');
       document.querySelector('.save').disabled = false;
       iaddress.classList.add('r');
-    } else if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.length === 0) {
+    } else if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value.length === 0) {
       alert('Password is required');
       document.querySelector('.save').disabled = false;
       ipassword.classList.add('r');
@@ -2091,15 +2093,15 @@ document.querySelector('.save').onclick = e => {
         }
       } else {};
 
-      if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.length > 0) {
-        if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.length < 7) {
+      if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value.length > 0) {
+        if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value.length < 7) {
           alert('Password is too short');
           document.querySelector('.save').disabled = false;
           ipassword.classList.add('r');
           ipassword.classList.remove('i');
         } else {
 
-          if (!document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value.match(ps)) {
+          if (!document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value.match(ps)) {
             alert('Password first letter must be uppercase');
             document.querySelector('.save').disabled = false;
             ipassword.classList.add('r');
@@ -2113,7 +2115,7 @@ document.querySelector('.save').onclick = e => {
       } else {};
 
 
-      if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value === document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value) {
+      if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value === document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value) {
         icpassword.classList.add('i')
         document.querySelector('.save').disabled = false;
         icpassword.classList.remove('r');
@@ -2163,7 +2165,7 @@ document.querySelector('.save').onclick = e => {
         document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
         document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
         document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
-        document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value
+        document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value
       )
 
       var edit = userOn(
@@ -2173,7 +2175,7 @@ document.querySelector('.save').onclick = e => {
         document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
         document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
         document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
-        document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value
+        document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value
       )
 
       userPanelDisplay(edit);
@@ -2207,7 +2209,7 @@ document.querySelector('.save').onclick = e => {
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value = "";
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value = "";
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value = "";
-      document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value = "";
+      document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild.value = "";
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value = "";
       
       ifirstname.classList.remove("i");
