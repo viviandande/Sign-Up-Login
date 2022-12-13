@@ -701,7 +701,7 @@ form input {
   background: rgba(0, 0, 0, 0.87);
 }
 
-.eyeB .eye-opened {
+.eyeB.eye-opened {
   background: url(eye-o-w.png) no-repeat center;
   background-size: contain;
 }
