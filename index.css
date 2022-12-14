@@ -702,7 +702,7 @@ form input {
 }
 
 .eyeB.eye-opened {
-  background: url(eye-o-w.png) no-repeat center;
+  background: url(eye-o-w.PNG) no-repeat center;
   background-size: contain;
 }
 
