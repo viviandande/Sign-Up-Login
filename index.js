@@ -1643,7 +1643,7 @@ const login = () => {
 }
 
 const check = () => {
-  document.querySelector('.dmiddlename').firstElementChild.innerText == "Undefined" && document.querySelector('.dress').firstElementChild.innerText == "Undefined" ? `${document.querySelector('.dmiddlename').firstElementChild.innerText = ""}` || `${document.querySelector('.dress').firstElementChild.innerText = ""}` : "";
+  document.querySelector('.dmiddlename').firstElementChild.innerText == "Undefined" && document.querySelector('.dress').firstElementChild.innerText == "Undefined" ? `${document.querySelector('.dmiddlename').firstElementChild.innerText = ""}` || `${document.querySelector('.dress').firstElementChild.innerText = ""}` : false;
 
   changer();
 }
@@ -1745,7 +1745,7 @@ if (userOnline.length > 0) {
   document.querySelector('.wrapper2').classList.remove('a');
   document.querySelector('.wrapper3').classList.add(userOnline);
   changer();
-  `${document.querySelector('.dmiddlename').firstElementChild.innerText === "Undefined"}` && `${document.querySelector('.dress').firstElementChild.innerText === "Undefined"}` ? `${document.querySelector('.dmiddlename').firstElementChild.innerText = ""}` || `${document.querySelector('.dress').firstElementChild.innerText = ""}` : "";
+  document.querySelector('.dmiddlename').firstElementChild.innerText == "Undefined" && document.querySelector('.dress').firstElementChild.innerText == "Undefined" ? `${document.querySelector('.dmiddlename').firstElementChild.innerText = ""}` || `${document.querySelector('.dress').firstElementChild.innerText = ""}` : false;
 } else {};
 
 document.querySelector('.logout').onclick = e => {
@@ -1761,6 +1761,7 @@ document.querySelector('.logout').onclick = e => {
   const execute = () => {
     localStorage.removeItem('online');
     localStorage.removeItem('userOn');
+    userOnline = userOnline.filter(userO => userO === users);
     userUser = userUser.filter(user => user === userOnline);
 
     document.querySelector('.dfirstname').firstElementChild.innerText = "";
@@ -2181,27 +2182,65 @@ document.querySelector('.save').onclick = e => {
       userPanelDisplay(edit);
 
       if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value === x[0].Firstname && document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value === x[0].Email) {
-
-      } else if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value !== x[0].Firstname || document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value !== x[0].Email) {
+        // If no changes to the firstname and email then do nothing here.
+      } else if(document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value !== x[0].Firstname && document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value !== x[0].Email) {
+        
         localStorage.removeItem('accounts');
         accountsPanel = accountsPanel.filter(accc => {
           return accc.Email !== x[0].Email;
         })
+        
+        btns = document.querySelectorAll('.account-body');
         acuser = newAccounts(
           document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value,
           document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
         )
-        createElements(acuser);
-        btns = document.querySelectorAll('.account-body');
         btns.forEach(btn => {
-          if (btn.firstElementChild.nextElementSibling.innerText === x[0].Email, btn.firstElementChild.innerText === x[0].Firstname) {
+          if (btn.firstElementChild.nextElementSibling.innerText === x[0].Email) {
             btn.remove();
-          } else {
-
-          }
-
+          } else {};
         })
-      }
+        createElements(acuser);
+
+      } else if (document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value !== x[0].Firstname && document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value == x[0].Email) {
+
+        localStorage.removeItem('accounts');
+        accountsPanel = accountsPanel.filter(accc => {
+          return accc.Email !== x[0].Email;
+        })
+        
+        btns = document.querySelectorAll('.account-body');
+        acuser = newAccounts(
+          document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value,
+          document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
+        )
+        btns.forEach(btn => {
+          if (btn.firstElementChild.nextElementSibling.innerText === x[0].Email) {
+            btn.remove();
+          } else {};
+        })
+        createElements(acuser);
+
+      } else if(document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value == x[0].Firstname && document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value !== x[0].Email) {
+
+        localStorage.removeItem('accounts');
+        accountsPanel = accountsPanel.filter(accc => {
+          return accc.Email !== x[0].Email;
+        })
+        
+        btns = document.querySelectorAll('.account-body');
+        acuser = newAccounts(
+          document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value,
+          document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.value,
+        )
+        btns.forEach(btn => {
+          if (btn.firstElementChild.nextElementSibling.innerText === x[0].Email) {
+            btn.remove();
+          } else {};
+        })
+        createElements(acuser);
+
+      } else {};
 
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.firstElementChild.value = "";
       document.querySelector('.edit-modal').firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.firstElementChild.value = "";
