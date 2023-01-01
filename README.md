@@ -14,7 +14,7 @@
  - I don't know what should I call it.
  - Clickable.
 
-<b> Sign-Up Validation: </b>
+<b> Sign-Up Validation: </b> <br>
   Firstname & Lastname:
   - Warn if inputs are empty.
   - Warn if either individual or both firstname and lastname contains of numbers or special characters.
@@ -39,7 +39,7 @@
   Confirm Password: 
   - Warn if passwords are not match.
 
-<b> Login Validation: </b>
+<b> Login Validation: </b> <br>
   Email: 
   - Warn if its input is empty.
   - Warn if email is too low.
@@ -60,7 +60,7 @@
  - Similar to sign-up validation.
  - Datas can be change upon save.
 
-<b> Forgot Password: </b>
+<b> Forgot Password: </b> <br>
   Forgot Password: Step 1 w/ Validation:
   - Warn if its input is empty.
   - Detects if mobile number or email.
