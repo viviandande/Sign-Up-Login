@@ -15,7 +15,7 @@
  - Clickable.
 
 <b> Sign-Up Validation: </b> <br>
-  Firstname & Lastname:
+  Firstname & Lastname: <br>
   - Warn if inputs are empty.
   - Warn if either individual or both firstname and lastname contains of numbers or special characters.
   
