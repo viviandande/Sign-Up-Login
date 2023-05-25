@@ -1,0 +1,360 @@
+@media screen and (max-width: 1350px) {
+
+  .wrapper .user-dashboard {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+  .wrapper .signUpForm {
+    width: 60%;
+  }
+
+  .wrapper .loginForm {
+    width: 40%;
+  }
+
+  .wrapper .account-wrapper {
+    width: 50%;
+  }
+
+  .wrapper .steps {
+    width: 60%;
+  }
+
+  .wrapper .validate-prompt-wrapper .validate-prompt-content {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 1140px) {
+
+  .wrapper .user-dashboard {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+
+  .wrapper .account-wrapper {
+    width: 55%;
+  }
+
+}
+
+@media screen and (max-width: 1020px) {
+
+  .wrapper .signUpForm {
+    width: 80%;
+  }
+  
+  .wrapper .loginForm {
+    width: 45%;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+  .wrapper .user-dashboard {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 870px) {
+  
+  .wrapper .loginForm {
+    width: 50%;
+  }
+
+  .wrapper .account-wrapper {
+    width: 70%;
+  }
+  
+  .wrapper .steps {
+    width: 70%;
+  }
+
+  .wrapper .validate-prompt-wrapper .validate-prompt-content {
+    width: 80%;
+  }
+
+  .wrapper .user-dashboard {
+    width: 95%;
+  }
+
+  .wrapper .user-dashboard .profile-wrapper h2 {
+    left: 0;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li span {
+    width: 40%;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li input {
+    width: 80%;
+    margin-top: .5em;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li .password-wrapper {
+    width: 50%;
+  }
+  .wrapper .user-dashboard .edit-account ul li .edit-password {
+    width: 20%;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li .password-wrapper input{
+    margin: 0;
+  }
+
+}
+
+@media screen and (max-width: 780px) {
+  
+  .wrapper .loginForm {
+    width: 55%;
+  }
+  
+}
+
+@media screen and (max-width: 740px) {
+
+  .wrapper .account-wrapper {
+    width: 80%;
+  }
+
+  .wrapper .validate-prompt-wrapper .validate-prompt-content {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 730px) {
+
+  .wrapper .signUpForm {
+    width: 95%;
+  }
+
+
+  .wrapper .user-dashboard .edit-account ul li span {
+    width: 40%;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li input {
+    width: 90%;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li .password-wrapper {
+    width: 90%;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li .edit-password {
+    margin-top: .5em;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li .password-wrapper input {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  
+  .wrapper .loginForm {
+    width: 60%;
+  }
+
+  .wrapper .steps {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 690px) {
+
+  .wrapper .user-dashboard {
+    padding: 2em 1em;
+  }
+
+  .wrapper .user-dashboard .profile-wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper .user-dashboard .profile-wrapper h2 {
+    text-align: center;
+  }
+
+  .wrapper .user-dashboard h3 {
+    margin: 3em 0 .5em;
+  }
+
+  .wrapper .user-dashboard .edit-account {
+    position: fixed;
+  }
+
+}
+
+@media screen and (max-width: 655px) {
+
+  .wrapper .signUpForm {
+    height: 95%;
+    overflow: auto;
+  }
+
+  .wrapper .account-wrapper {
+    width: 90%;
+  }
+
+  .wrapper .validate-prompt-wrapper .validate-prompt-content {
+    width: 95%;
+  }
+
+}
+
+@media screen and (max-width: 640px), screen and (max-width: 740px) {
+  
+  .wrapper2.show {
+    flex-direction: row;
+    padding: 2em 0;
+  }
+
+  .wrapper .user-dashboard .edit-account {
+    position: fixed;
+  }
+
+}
+
+@media screen and (max-width: 630px) {
+
+  .wrapper .signUpForm::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .wrapper .signUpForm {
+    height: 95%;
+    overflow: auto;
+  }
+
+  .wrapper .signUpForm .input-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  
+  .wrapper .signUpForm::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .wrapper .signUpForm {
+    height: 95%;
+    overflow: auto;
+  }
+
+  .wrapper .signUpForm .input-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .wrapper .loginForm {
+    width: 80%;
+  }
+
+}
+
+@media screen and (min-height: 1024px) { /* HEIGHT */
+
+  .wrapper .signUpForm {
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+  
+  .wrapper .account-wrapper {
+    width: 95%;
+  }
+
+  .wrapper .account-wrapper .account-datas .data-wrapper {
+    width: 90%;
+  }
+  
+  .wrapper .steps {
+    width: 90%;
+  }
+
+  .wrapper .step2 .input-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .wrapper .step3 .password-wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper .step2 .input-wrapper input,
+  .wrapper .step3 .password-wrapper input,
+  .wrapper .step3 .password-wrapper .password-eye-wrapper {
+    width: 100%;
+    margin: 1em 0;
+  }
+  
+  .wrapper .step3 .password-wrapper input,
+  .wrapper .step3 .password-wrapper .password-eye-wrapper {
+    margin: .5em 0;
+  }
+
+  .wrapper .step3 .password-wrapper {
+    margin: 1em 0 0em;
+  }
+
+  .wrapper .step3 small {
+    margin: 0 0 1em;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  
+  .wrapper .signUpForm {
+    width: 90%;
+    padding: 1em;
+  }
+
+  .wrapper .loginForm {
+    width: 90%;
+    padding: 1em;
+  }
+
+  .wrapper .user-dashboard {
+    padding: 1.5em 1em 2em;
+  }
+
+  .wrapper .user-dashboard .logout-wrapper {
+    margin-bottom: 2em;
+  }
+
+  .wrapper .user-dashboard table th {
+    width: 20%;
+  }
+
+  .wrapper .user-dashboard .button-wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper .user-dashboard .button-wrapper button {
+    margin: .5em 0;
+    width: 60%;
+  }
+
+  .wrapper .user-dashboard .edit-account ul li .edit-password {
+    margin-bottom: .5em;
+  }
+
+}
