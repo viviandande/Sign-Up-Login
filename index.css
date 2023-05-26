@@ -303,7 +303,7 @@ button {
 }
 
 .wrapper .signUpForm .input-wrapper .input-container .password-wrapper button.show {
-  background: url('img/eye-o-b.png') no-repeat center;
+  background: url('img/eye-o-b.PNG') no-repeat center;
   background-size: cover;
 }
 
@@ -540,7 +540,7 @@ button {
 }
 
 .wrapper .loginForm .input-container .password-wrapper button.show {
-  background: url('img/eye-o-b.png') no-repeat center;
+  background: url('img/eye-o-b.PNG') no-repeat center;
   background-size: cover;
 }
 
@@ -841,7 +841,7 @@ button {
 }
 
 .wrapper .user-dashboard .edit-account ul li .password-wrapper button.show {
-  background: url('img/eye-o-w.png') no-repeat center;
+  background: url('img/eye-o-w.PNG') no-repeat center;
   background-size: cover;
 }
 
@@ -1024,7 +1024,7 @@ button {
 }
 
 .wrapper .steps .password-wrapper .password-eye-wrapper button.show {
-  background: url('img/eye-o-b.png') no-repeat center;
+  background: url('img/eye-o-b.PNG') no-repeat center;
   background-size: cover;
 }
 
@@ -1217,6 +1217,6 @@ body.dark {
 .wrapper .loginForm .input-container .password-wrapper.dark button.show,
 .wrapper .user-dashboard .edit-account ul li .password-wrapper.dark button.show,
 .wrapper .steps .password-wrapper .password-eye-wrapper.dark button.show {
-  background: url('img/eye-o-w.png') no-repeat center;
+  background: url('img/eye-o-w.PNG') no-repeat center;
   background-size: cover;
 }
