@@ -23,7 +23,7 @@ accountsButton = document.querySelector('.wrapper .navigation button'),
 accountsWrapper = document.querySelector('.wrapper .account-wrapper'),
 accountsCloseButton = document.querySelector('.wrapper .account-wrapper button'),
 colorWrapper = document.querySelector('.wrapper .navigation .color-wrapper'),
-colorButton = colorWrapper.querySelector('button');
+colorButton = colorWrapper.querySelector('button'),
 promptWrapper = document.querySelector('.prompt-wrapper'),
 closePromptWrapper = document.querySelector('.prompt-wrapper .prompt-content button'),
 userPanel = document.querySelector('.user-panel'),
@@ -55,9 +55,23 @@ window.onload = e => {
 
   if(_accounts.length > 0) {
 
+    accountsWrapper.querySelector('.account-datas').style.display = 'flex';
+
+    accountsWrapper.querySelector('h2 span').textContent = 'List of accounts';
+
     document.querySelector('.account-datas').innerHTML = accountsData(_accounts);
 
+    accountsIndicatorNumber.style.display = 'block';
+
     setTimeout(() => accountsDataFunc(), 100);
+
+  } else {
+
+    accountsIndicatorNumber.style.display = 'none';
+
+    accountsWrapper.querySelector('.account-datas').style.display = 'none';
+    
+    accountsWrapper.querySelector('h2 span').textContent = 'No accounts';
 
   }
 
@@ -221,6 +235,24 @@ function accountsData(value) {
 }
 
 function accountsDataFunc () {
+
+  if(_accounts.length === 0) {
+
+    accountsIndicatorNumber.style.display = 'none';
+
+    accountsWrapper.querySelector('.account-datas').style.display = 'none';
+
+    accountsWrapper.querySelector('h2 span').textContent = 'No accounts';
+
+  } else {
+
+    accountsWrapper.querySelector('.account-datas').style.display = 'flex';
+
+    accountsWrapper.querySelector('h2 span').textContent = 'List of accounts';
+
+    accountsIndicatorNumber.style.display = 'block';
+
+  }
 
   accountsIndicatorNumber.textContent = _accounts.length;
 
@@ -1413,6 +1445,12 @@ closePromptWrapper.onclick = e => {
   signUpForm['confirmpassword'].value = '';
 
   document.querySelector('.account-datas').innerHTML = accountsData(_accounts);
+
+  accountsWrapper.querySelector('.account-datas').style.display = 'flex';
+
+  accountsWrapper.querySelector('h2 span').textContent = 'List Of Accounts';
+
+  accountsIndicatorNumber.style.display = 'block';
 
   setTimeout(() => accountsDataFunc(), 100);
 
