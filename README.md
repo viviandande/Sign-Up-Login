@@ -9,7 +9,7 @@
  - Did some few changes and added some other too.
  - Some validations are re-coded.
  - I still do not know to how to optimized or minimized the usage of single threaded.
- - This is not yet fully responsive, some are but some aren't " Still working on it."
+ - This is not yet fully responsive, some are but some aren't.
 
 # Changes & Added:
  - Profile Picture
