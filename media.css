@@ -114,6 +114,20 @@
 
 }
 
+/*
+  - Nokia N9 Landscape
+*/
+@media screen and (max-width: 854px) {
+  
+  .wrapper1.show,
+  .wrapper2.show {
+    flex-direction: row;
+    padding: 2em 0;
+    overflow-x: scroll;
+  }
+
+}
+
 @media screen and (max-width: 780px) {
   
   .wrapper .loginForm {
@@ -218,13 +232,74 @@
 
 @media screen and (max-width: 640px), screen and (max-width: 740px) {
   
-  .wrapper2.show {
+  .wrapper1.show {
+    overflow-x: scroll;
     flex-direction: row;
     padding: 2em 0;
   }
 
+  .wrapper2.show {
+    flex-direction: row;
+    padding: 2em 0;
+    overflow-x: scroll;
+  }
+
   .wrapper .user-dashboard .edit-account {
     position: fixed;
+  }
+
+}
+
+
+/*
+  - 732 x 412;
+  - Nexus 5 landscape ISSUE
+*/
+@media screen and (max-width: 732px) {
+
+  .wrapper2.show {
+    flex-direction: row;
+  }
+
+}
+
+/*
+  - 712 x 1138;
+  - Galaxy Tab S4,
+*/
+@media screen and (max-width: 712px) {
+
+  .wrapper2.show {
+    flex-direction: column;
+  }
+
+}
+
+/*
+  - 658 x 320 Landscape;
+  - Galaxy S9+
+*/
+@media screen and (max-width: 658px) {
+
+  .wrapper2.show {
+    flex-direction: row;
+  }
+
+}
+
+/*
+  - 360 x 640;
+  - Nexus 5 landscape 640 x 360 ISSUE
+*/
+@media screen and (max-width: 640px) {
+
+  .wrapper .signUpForm {
+    overflow: none;
+    height: auto;
+  }
+  
+  .wrapper2.show {
+    flex-direction: row;
   }
 
 }
@@ -246,15 +321,26 @@
 
 }
 
+/*
+ -600 x 1024;
+ - Blackberry PlayBook,
+ - Nexus 7 600 x 960,
+
+*/
 @media screen and (max-width: 600px) {
   
   .wrapper .signUpForm::-webkit-scrollbar {
     width: 0;
   }
 
+  .wrapper2.show {
+    flex-direction: column;
+  }
+
   .wrapper .signUpForm {
-    height: 95%;
-    overflow: auto;
+    height: auto;
+    overflow-x: scroll;
+    width: 80%;
   }
 
   .wrapper .signUpForm .input-wrapper {
@@ -262,7 +348,7 @@
   }
 
   .wrapper .loginForm {
-    width: 80%;
+    width: 70%;
   }
 
 }
@@ -275,6 +361,7 @@
 
 }
 
+/* 500px */
 @media screen and (max-width: 575px) {
   
   .wrapper .account-wrapper {
@@ -320,6 +407,119 @@
 
 }
 
+@media screen and (max-width: 533px) {
+
+  .wrapper2.show {
+    flex-direction: row;
+  }
+
+}
+
+/* 
+  - 480 x 854;
+  - Nokia N9,
+
+*/
+@media screen and (max-width: 480px) {
+
+  .wrapper2.show {
+    flex-direction: column;
+  }
+
+}
+
+/* 
+  - 412 x 732;
+  - Nexus 6,
+  - Nexus 6P
+*/
+@media screen and (max-width: 412px) {
+
+  .wrapper .signUpForm {
+    width: 90%;
+    padding: 2em 1.5em;
+  }
+
+  .wrapper .signUpForm input {
+    width: 100%;
+  }
+
+  .wrapper .loginForm {
+    width: 90%;
+    padding: 1em 1.5em;
+  }
+
+  .wrapper .loginForm input {
+    width: 100%;
+  }
+  
+  .wrapper .steps {
+    padding: 2em;
+  }
+  
+  .wrapper .steps .input-container input {
+    width: 100%;
+  }
+
+}
+
+/* 
+  - 393 x 786;
+  - Pixel 3,
+*/
+
+/* 
+  - 384 x 640;
+  - LG Optimus L70,
+  - Nexus 4,
+
+*/
+
+@media screen and (max-width: 384px) {
+
+  .wrapper .signUpForm {
+    padding: 1em;
+  }
+
+  .wrapper .loginForm {
+    width: 90%;
+    padding: 1em;
+  }
+
+  .wrapper .loginForm input {
+    width: 100%;
+  }
+
+  .wrapper .steps {
+    padding: 2em;
+  }
+
+  .wrapper .steps .input-container input {
+    width: 100%;
+  }
+  
+  .wrapper .user-dashboard .button-wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper .user-dashboard .button-wrapper button {
+    margin: .5em 0;
+    width: 60%;
+  }
+
+}
+
+/*
+  - 360 x 640;
+  - BlackBerry Z30,
+  - Galaxy Note 3,
+  - Galaxy Note II,
+  - Galaxy S III,
+  - Galaxy S8 360 x 740,
+  - Microsoft Lumia 950,
+  - Moto G4,
+
+*/
 @media screen and (max-width: 360px) {
   
   .wrapper .signUpForm {
@@ -355,6 +555,51 @@
 
   .wrapper .user-dashboard .edit-account ul li .edit-password {
     margin-bottom: .5em;
+  }
+
+}
+
+
+/* 
+  - 353 x 745;
+  - Pixel 4,
+*/
+
+@media screen and (max-height: 320px) {
+
+  .wrapper2.show {
+    flex-direction: row;
+  }
+
+}
+
+/*
+  - 320 x 658;
+  - Galaxy S9+,
+  - Nokia Lumia 520,
+  - Iphone 4
+*/
+@media screen and (max-width: 320px) {
+
+  .wrapper .signUpForm {
+    width: 95%;
+  }
+
+  .wrapper2.show {
+    flex-direction: row;
+  }
+
+  .wrapper .loginForm {
+    width: 95%;
+  }
+
+  .wrapper .steps {
+    width: 95%;
+    padding: 2em 1em;
+  }
+
+  .wrapper .steps .input-container input {
+    width: 100%;
   }
 
 }
