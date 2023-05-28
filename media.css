@@ -60,8 +60,52 @@
 
 @media screen and (max-width: 1000px) {
 
+  .prompt-wrapper .prompt-content {
+    width: 80%;
+  }
+
   .wrapper .user-dashboard {
     width: 90%;
+  }
+
+}
+
+/* 
+  - 915 x 412;
+  - Samsung Galalxy Ultra,
+*/
+@media screen and (max-width: 915px) {
+
+  .wrapper .user-dashboard .delete-prompt {
+    height: 100%;
+    position:fixed;
+  }
+
+  .wrapper1.show,
+  .wrapper2.show {
+    overflow-x: scroll;
+    padding: 2em 0;
+    flex-direction: row;
+  }
+
+}
+
+/* 
+  - 896 x 414;
+  - iPhone XR,
+*/
+@media screen and (max-width: 896px) {
+
+  .wrapper .user-dashboard .delete-prompt {
+    height: 100%;
+    position:fixed;
+  }
+
+  .wrapper1.show,
+  .wrapper2.show {
+    overflow-x: scroll;
+    padding: 2em 0;
+    flex-direction: row;
   }
 
 }
@@ -128,10 +172,33 @@
 
 }
 
+/*
+  - 820 x 1180;
+  - iPad Air
+*/
+@media screen and (max-width: 820px) {
+  
+  .wrapper2.show {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 @media screen and (max-width: 780px) {
+
+  .prompt-wrapper .prompt-content {
+    width: 95%;
+  }
   
   .wrapper .loginForm {
     width: 55%;
+  }
+  
+  .wrapper .user-dashboard .delete-prompt {
+    height: 100%;
+    position:fixed;
   }
   
 }
@@ -144,6 +211,18 @@
 
   .wrapper .validate-prompt-wrapper .validate-prompt-content {
     width: 90%;
+  }
+
+}
+
+/*
+  - 732 x 412;
+  - Nexus 5 landscape ISSUE
+*/
+@media screen and (max-width: 732px) {
+
+  .wrapper2.show {
+    flex-direction: row;
   }
 
 }
@@ -173,6 +252,18 @@
 
   .wrapper .user-dashboard .edit-account ul li .password-wrapper input {
     width: 100%;
+  }
+
+}
+
+/*
+  - 712 x 1138;
+  - Galaxy Tab S4,
+*/
+@media screen and (max-width: 712px) {
+
+  .wrapper2.show {
+    flex-direction: column;
   }
 
 }
@@ -213,15 +304,52 @@
 
 }
 
-@media screen and (max-width: 655px) {
+/*
+  - 667 x 375 LANDSCAPE MODE;
+  - iPhone SE
+*/
+@media screen and (max-width: 667px) {
 
-  .wrapper .signUpForm {
-    height: 95%;
-    overflow: auto;
+  .wrapper2.show {
+    flex-direction: column;
   }
 
-  .wrapper .account-wrapper {
+}
+
+/*
+  - 658 x 320 Landscape;
+  - Galaxy S9+
+*/
+@media screen and (max-width: 658px) {
+
+  .wrapper2.show {
+    flex-direction: row;
+  }
+
+}
+
+/*
+  - 653 x 280;
+  - Galaxy Fold
+*/
+@media screen and (max-width: 655px) {
+
+  .wrapper .loginForm,
+  .wrapper .loginForm.dark {
+    width: 65%;
+  }
+
+  .wrapper .account-wrapper,
+  .wrapper .account-wrapper.dark {
     width: 90%;
+    height: 95%;
+  }
+
+  .wrapper .account-wrapper .account-datas,
+  .wrapper .account-wrapper.dark .account-datas {
+    overflow-x: scroll;
+    height: 100%;
+    padding: 2em 0;
   }
 
   .wrapper .validate-prompt-wrapper .validate-prompt-content {
@@ -250,48 +378,15 @@
 
 }
 
-
-/*
-  - 732 x 412;
-  - Nexus 5 landscape ISSUE
-*/
-@media screen and (max-width: 732px) {
-
-  .wrapper2.show {
-    flex-direction: row;
-  }
-
-}
-
-/*
-  - 712 x 1138;
-  - Galaxy Tab S4,
-*/
-@media screen and (max-width: 712px) {
-
-  .wrapper2.show {
-    flex-direction: column;
-  }
-
-}
-
-/*
-  - 658 x 320 Landscape;
-  - Galaxy S9+
-*/
-@media screen and (max-width: 658px) {
-
-  .wrapper2.show {
-    flex-direction: row;
-  }
-
-}
-
 /*
   - 360 x 640;
   - Nexus 5 landscape 640 x 360 ISSUE
 */
 @media screen and (max-width: 640px) {
+
+  .prompt-wrapper .prompt-content {
+    width: 80%;
+  }
 
   .wrapper .signUpForm {
     overflow: none;
@@ -300,6 +395,23 @@
   
   .wrapper2.show {
     flex-direction: row;
+  }
+
+  .wrapper .account-wrapper,
+  .wrapper .account-wrapper.dark {
+    width: 80%;
+    height: auto;
+  }
+
+  .wrapper .account-wrapper .account-datas,
+  .wrapper .account-wrapper.dark .account-datas {
+    overflow-x: none;
+    height: auto;
+    padding: 2em;
+  }
+  .wrapper .user-dashboard .delete-prompt {
+    height: 100%;
+    position:fixed;
   }
 
 }
@@ -428,6 +540,40 @@
 
 }
 
+/*
+  - 414 x 896;
+  - iPhone XR,
+*/
+@media screen and (max-width: 414px) {
+  
+  .wrapper .signUpForm {
+    width: 90%;
+    padding: 2em 1.5em;
+  }
+
+  .wrapper .signUpForm input {
+    width: 100%;
+  }
+
+  .wrapper .loginForm {
+    width: 90%;
+    padding: 1em 1.5em;
+  }
+
+  .wrapper .loginForm input {
+    width: 100%;
+  }
+  
+  .wrapper .steps {
+    padding: 2em;
+  }
+  
+  .wrapper .steps .input-container input {
+    width: 100%;
+  }
+
+}
+
 /* 
   - 412 x 732;
   - Nexus 6,
@@ -444,7 +590,8 @@
     width: 100%;
   }
 
-  .wrapper .loginForm {
+  .wrapper .loginForm,
+  .wrapper .loginForm.dark {
     width: 90%;
     padding: 1em 1.5em;
   }
@@ -510,6 +657,16 @@
 }
 
 /*
+  - 375 x 667;
+  - iPhone SE
+*/
+@media screen and (max-width: 375px) {
+  .prompt-wrapper .prompt-content {
+    width: 95%;
+  }
+}
+
+/*
   - 360 x 640;
   - BlackBerry Z30,
   - Galaxy Note 3,
@@ -521,6 +678,10 @@
 
 */
 @media screen and (max-width: 360px) {
+
+  .prompt-wrapper .prompt-content {
+    width: 95%;
+  }
   
   .wrapper .signUpForm {
     width: 90%;
@@ -563,11 +724,28 @@
 /* 
   - 353 x 745;
   - Pixel 4,
-*/
-
+  */
+  
+  /* - 
+  
+  - 480 x 320 landscape mode;
+  - Iphone 4;
+  
+  */
 @media screen and (max-height: 320px) {
 
   .wrapper2.show {
+    flex-direction: row;
+  }
+
+  .wrapper .loginForm {
+    width: 85%;
+    padding: 2em;
+  }
+
+  .wrapper4.show {
+    padding: 2em;
+    overflow-x: scroll;
     flex-direction: row;
   }
 
@@ -577,7 +755,6 @@
   - 320 x 658;
   - Galaxy S9+,
   - Nokia Lumia 520,
-  - Iphone 4
 */
 @media screen and (max-width: 320px) {
 
@@ -600,6 +777,124 @@
 
   .wrapper .steps .input-container input {
     width: 100%;
+  }
+
+  .wrapper .user-dashboard .delete-prompt p{
+    text-align: center;
+  }
+
+  .prompt-wrapper .prompt-content {
+    width: 95%;
+  }
+
+  .prompt-wrapper .prompt-content h1 {
+    font-size: 1.5em;
+  }
+
+}
+
+/* 320 x 240 LANDSCAPE JIOPHONE 2 */
+@media screen and (max-width: 320px) {
+
+  .wrapper .user-dashboard .delete-prompt {
+    overflow-x: scroll;
+    padding: 2em 0;
+  }
+
+}
+
+/* 
+  - 280 x 653;
+  - Galaxy Fold
+*/
+@media screen and (max-width: 280px) {
+
+  .wrapper .signUpForm,
+  .wrapper .signUpForm.dark {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0 1em;
+  }
+
+  .wrapper .loginForm,
+  .wrapper .loginForm.dark {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 1em;
+  }
+
+  .account-wrapper h2 {
+    font-size: 1em;
+  }
+  
+  .wrapper4.show {
+    padding: 0;
+  }
+
+  .wrapper .steps,
+  .wrapper .steps.dark {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .prompt-wrapper .prompt-content h1 {
+    font-size: 1em;
+  }
+  
+  .wrapper .user-dashboard .button-wrapper button {
+    margin: .5em 0;
+    width: 90%;
+  }
+
+}
+
+/* 
+  - 240 x 320;
+  - JioPhone 2
+*/
+@media screen and (max-width: 240px) {
+
+  .wrapper .signUpForm,
+  .wrapper .signUpForm.dark {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0 1em;
+  }
+
+  .wrapper .loginForm,
+  .wrapper .loginForm.dark {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 1em;
+  }
+
+  .account-wrapper h2 {
+    font-size: 1em;
+  }
+  
+  .wrapper4.show {
+    padding: 0;
+  }
+
+  .wrapper .steps,
+  .wrapper .steps.dark {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .prompt-wrapper .prompt-content h1 {
+    font-size: 1em;
+  }
+  
+  .wrapper .user-dashboard .button-wrapper button {
+    margin: .5em 0;
+    width: 90%;
   }
 
 }
