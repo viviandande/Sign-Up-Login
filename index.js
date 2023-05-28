@@ -1431,12 +1431,6 @@ class Open_Dashboard extends Switch {
 // Arrow Function
 closePromptWrapper.onclick = e => {
 
-  e.target.parentElement.parentElement.classList.remove('show');
-  signUpForm.parentElement.classList.remove('show');
-  
-  const form = new Switch(signUpForm);
-  form.open();
-
   signUpForm['firstname'].value = '';
   signUpForm['lastname'].value = '';
   signUpForm['number'].value = '';
@@ -1453,6 +1447,8 @@ closePromptWrapper.onclick = e => {
   accountsIndicatorNumber.style.display = 'block';
 
   setTimeout(() => accountsDataFunc(), 100);
+
+  setTimeout(() => location.href = '', 200);
 
 }
 
@@ -1598,8 +1594,6 @@ proceedStep1Button.onclick = e => {
     toValidate.formValidate();
 
   }, 250);
-
-  // _accounts.filter(data => data.email === proceedStep1Values.value || data.number === proceedStep1Values.value).length > 0 ?
 
 }
 
@@ -1777,13 +1771,10 @@ confirmDeleteAccount.onclick = e => {
 
     localStorage.setItem('accounts', JSON.stringify(_accounts));
 
-    deletePrompt.classList.remove('show');
-
     document.querySelector('.account-datas').innerHTML = accountsData(_accounts);
     setTimeout(() => accountsDataFunc(), 100);
 
-    const backTologin = new Switch(loginForm);
-    backTologin.loginFormFunc();
+    setTimeout(() => location.href = '', 200);
 
   }, 200);
 
