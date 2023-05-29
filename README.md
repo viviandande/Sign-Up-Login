@@ -1,6 +1,8 @@
-# Simple Sign-Up, Login w/ Userpanel.
+# Simple Sign-Up, Login w/ User Dashboard.
 
- - This is re-coded and this is not yet fully responsive.
+ - Simple Sign-Up, Login w/ User Dashboard using only the " LocalStorage ".
+
+ - This is re-coded.
 
  - Here is the demo link :  <a href="https://jinshin19.github.io/Sign-Up-Login/"> Try it. </a>
 
